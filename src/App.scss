@@ -1,0 +1,80 @@
+body {
+  box-sizing: border-box;
+  background: #23241d;
+  overflow: hidden;
+}
+
+h1,h2,h3,a{
+  font-family: 'Oswald', sans-serif;
+}
+p{
+  font-family: 'Merriweather Sans', sans-serif;
+}
+a{
+text-decoration: none;
+  &:focus{
+  outline:none;
+   }
+}
+.App{
+  height:100vh;
+}
+.box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 50px 75px;
+  border-radius: 20px;
+  box-shadow: inset 13px 13px 22px #11120e, inset -13px -13px 22px #313228;
+  box-sizing: border-box;
+  width: 60%;
+}
+.page-wrapper{
+  height:100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  margin: .5em;
+  color: #b3751e;
+  box-sizing: border-box;
+}
+.logo-wrapper{
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content: flex-start;
+    img{
+      width:100px;
+    }
+
+    h2{
+      font-size: 32px;
+      color:#6E7836;
+      text-transform: uppercase;
+      margin-left: 50px;
+    }
+}
+
+button{
+  &:focus{
+    outline:none;
+  }
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
