@@ -1,0 +1,25 @@
+.list-wrapper{
+  .table-wrapper{
+    width:60%;
+    .table-header,.table-items{
+      display: flex;
+      padding:10px 0;
+      div{
+        flex-basis: 33%;
+        text-align: center;
+      }
+    }
+  }
+.game-item{
+  text-transform: capitalize;
+}
+}
+
+@media only screen and (max-width: 600px) {
+  .list-wrapper{
+    .table-wrapper{
+      width:100%;
+    }
+  }
+
+}
