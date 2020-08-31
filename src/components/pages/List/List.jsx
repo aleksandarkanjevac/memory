@@ -1,5 +1,5 @@
-import React from 'react';
-import  './list.scss';
+import React from "react";
+import "./list.scss";
 
 function List() {
   const items = { ...localStorage };
@@ -14,11 +14,13 @@ function List() {
         </div>
         {Object.values(items).map((value, label) => {
           let objValue = JSON.parse(value);
-          return <div className="table-items" key={label}>
-                   <div className="nickname-item">{objValue.nickname}</div>
-                   <div className="game-item">{objValue.game}</div>
-                  <div className="time-item">{objValue.time}</div>
-                 </div>
+          return (
+            <div className="table-items" key={label}>
+              <div className="nickname-item">{objValue.nickname}</div>
+              <div className="game-item">{objValue.game}</div>
+              <div className="time-item">{objValue.time}</div>
+            </div>
+          );
         })}
       </div>
     </div>
