@@ -10,6 +10,7 @@ function Log() {
   const [game, setGame] = useState("small");
 
 
+
   const player = {
     nickname: nickname,
     game: game,
@@ -17,15 +18,14 @@ function Log() {
   };
   const goRight = () => {
     var elTransform =
-      "translateZ(-184px) rotateY(" + rotateNext(angle) + "deg)";
+      "translateZ(-125px) rotateY(" + rotateNext(angle) + "deg)";
     setStyle({
       transform: elTransform,
     });
   };
   const goLeft = () => {
-    console.log("left");
     var elTransform =
-      "translateZ(-184px) rotateY(" + rotatePrevious(angle) + "deg)";
+      "translateZ(-125px) rotateY(" + rotatePrevious(angle) + "deg)";
     setStyle({
       transform: elTransform,
     });
@@ -50,6 +50,7 @@ function Log() {
     );
     window.location.href = "/board";
   };
+  console.log('render');
   return (
     <div className="log-page--wrapper page-wrapper">
       <div className="container">

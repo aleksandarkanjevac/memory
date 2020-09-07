@@ -1,6 +1,8 @@
 .list-wrapper{
   .table-wrapper{
     width:60%;
+    box-shadow: inset 13px 13px 22px #11120e, inset -13px -13px 22px #313228;
+    padding:50px 0;
     .table-header,.table-items{
       display: flex;
       padding:10px 0;

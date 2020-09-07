@@ -78,3 +78,17 @@ button{
     transform: rotate(360deg);
   }
 }
+
+
+@media only screen and (max-width: 600px) {
+  .box{
+    width:100%;
+  }
+  .logo-wrapper{
+    flex-direction: column;
+    left:0;
+      h2{
+        margin-left: 0;
+      }
+  }
+}

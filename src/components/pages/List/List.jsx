@@ -10,7 +10,7 @@ function List() {
         <div className="table-header">
           <div className="nickname">Nickname</div>
           <div className="game-level">Game Size</div>
-          <div className="time-score">Time score</div>
+          <div className="time-score">Time Score</div>
         </div>
         {Object.values(items).map((value, label) => {
           let objValue = JSON.parse(value);
