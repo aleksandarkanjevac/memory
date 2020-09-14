@@ -1,31 +1,31 @@
-import React, { useState } from "react";
-import TextInput from "../../atoms/TextInput/TextInput";
-import SelectField from "../../atoms/SelectField/SelectField";
-import "./log.scss";
+import React, { useState } from 'react';
+import TextInput from '../../atoms/TextInput/TextInput';
+import SelectField from '../../atoms/SelectField/SelectField';
+import './log.scss';
+import { useHistory } from 'react-router';
 
 function Log() {
   const [cubeStyle, setStyle] = useState({});
   const [angle, setAngle] = useState(0);
-  const [nickname, setNickname] = useState("");
-  const [game, setGame] = useState("small");
-
-
+  const [nickname, setNickname] = useState('');
+  const [game, setGame] = useState('small');
 
   const player = {
+    id: new Date().getTime(),
     nickname: nickname,
     game: game,
     time: 0,
   };
   const goRight = () => {
     var elTransform =
-      "translateZ(-125px) rotateY(" + rotateNext(angle) + "deg)";
+      'translateZ(-125px) rotateY(' + rotateNext(angle) + 'deg)';
     setStyle({
       transform: elTransform,
     });
   };
   const goLeft = () => {
     var elTransform =
-      "translateZ(-125px) rotateY(" + rotatePrevious(angle) + "deg)";
+      'translateZ(-125px) rotateY(' + rotatePrevious(angle) + 'deg)';
     setStyle({
       transform: elTransform,
     });
@@ -42,15 +42,16 @@ function Log() {
     setAngle(angle);
     return angle;
   };
-
-  const Storage = () => {
-    localStorage.setItem(
-      "Player " + new Date().getTime(),
-      JSON.stringify(player)
-    );
-    window.location.href = "/board";
+  const history = useHistory();
+  const enterBoard = () => {
+    history.push({
+      pathname: '/board',
+      state: {
+        player: player,
+      },
+    });
   };
-  console.log('render');
+
   return (
     <div className="log-page--wrapper page-wrapper">
       <div className="container">
@@ -74,9 +75,9 @@ function Log() {
                   value={game}
                   change={(e) => setGame(e.target.value)}
                   options={[
-                    {'value': 'small', 'label': '4x4 Small'},
-                    {'value': 'medium', 'label': '8x8 Medium'},
-                    {'value': 'large', 'label': '12x12 Large'}
+                    { value: 'small', label: '4x2 Small' },
+                    { value: 'medium', label: '4x3 Medium' },
+                    { value: 'large', label: '4x4 Large' },
                   ]}
                 />
               </div>
@@ -91,7 +92,13 @@ function Log() {
             </div>
             <div className="cube__side cube__back">
               <div className="cube-input--wrapper">
-                <button className="play-btn" onClick={Storage}>
+                <button
+                  className="play-btn"
+                  onClick={() => {
+                    //setPlayers(player)
+                    enterBoard();
+                  }}
+                >
                   PLAY
                 </button>
               </div>

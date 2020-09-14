@@ -1,19 +1,19 @@
-.select-wrapper{
-  margin-top:20px;
-    select{
-      font-size: 26px;
-      font-family: 'Oswald', sans-serif;
-      box-sizing: border-box;
-      padding:0 50px;
-      color:#b3751e;
-      background: none;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      transition: all .3s ease-in-out;
-      box-shadow: inset 11px 11px 22px #11120e, inset -11px -11px 22px #313228;
-      height: 52px;
-      &:focus{
-        outline: none;
-      }
+.select-wrapper {
+  margin-top: 20px;
+  select {
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+    padding: 0 50px;
+    color: #b3751e;
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: inset 11px 11px 22px #11120e, inset -11px -11px 22px #313228;
+    height: 52px;
+    &:focus {
+      outline: none;
+    }
   }
 }

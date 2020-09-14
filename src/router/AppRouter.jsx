@@ -8,10 +8,10 @@ import Board from '../components/pages/Board/Board';
 function AppRouter() {
   return (
     <Switch>
-      <Route exact path="/" component={Home}/>
-      <Route  path="/log" component={Log}/>
-      <Route path="/list" component={List}/>
-      <Route path="/board" component={Board}/>
+      <Route exact path="/" component={Home} />
+      <Route path="/log" component={Log} />
+      <Route path="/list" component={List} />
+      <Route path="/board" component={Board} />
     </Switch>
   );
 }
