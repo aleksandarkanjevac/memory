@@ -5,7 +5,7 @@ export const getPlayer = () => {
   console.log('Player Services!!');
 };
 
-//Method for storaging Players data
+//Method for storage Players data
 export const setPlayers = (player) => {
   let data = localStorage.getItem('Players');
   data = data ? JSON.parse(data) : [];
@@ -58,7 +58,7 @@ let cardsValues = [];
 export const handleCard = (event) => {
   let attribute = event.currentTarget.dataset.symbol;
   cardsValues.push(attribute);
-  event.currentTarget.className = 'fliped';
+  event.currentTarget.className = 'flipped';
 
   if (cardsValues.length === 2 && allEqual(cardsValues)) {
     setTimeout(function () {
@@ -66,9 +66,9 @@ export const handleCard = (event) => {
       cardsValues = [];
     }, 1000);
   } else if (cardsValues.length === 2 && !allEqual(cardsValues)) {
-    let misedCards = document.querySelectorAll('.fliped');
+    let missedCards = document.querySelectorAll('.flipped');
     setTimeout(function () {
-      flipCards(misedCards);
+      flipCards(missedCards);
       cardsValues = [];
     }, 800);
   }
@@ -86,8 +86,8 @@ const destroyCards = (card) => {
   });
 };
 
-const flipCards = (misedCards) => {
-  Object.keys(misedCards).forEach(function (key) {
-    misedCards[key].classList.remove('fliped');
+const flipCards = (missedCards) => {
+  Object.keys(missedCards).forEach(function (key) {
+    missedCards[key].classList.remove('flipped');
   });
 };
