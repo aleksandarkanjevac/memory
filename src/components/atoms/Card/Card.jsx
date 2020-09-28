@@ -3,10 +3,10 @@ import './card.scss';
 const Card = (props) => {
   return (
     <div
-      id="card"
+      id={props.id}
+      className={props.className}
       onClick={props.clickCard}
-      key={props.cardKey}
-      data-symbol={props.cardFace}
+      data-hit={props.dataHit}
     >
       <div className="front"></div>
       <div className="back"></div>

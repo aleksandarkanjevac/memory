@@ -1,4 +1,4 @@
-#card {
+.card {
   -webkit-transition: -webkit-transform 0.7s;
   transition: transform 0.7s;
   -webkit-transform-style: preserve-3d;
@@ -31,27 +31,31 @@
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-[data-symbol='1'] .back {
+#card1 .back {
   background: red;
 }
-[data-symbol='2'] .back {
+#card2 .back {
   background: yellow;
 }
-[data-symbol='3'] .back {
+#card3 .back {
   background: blue;
 }
-[data-symbol='4'] .back {
+#card4 .back {
   background: green;
 }
-[data-symbol='5'] .back {
+#card5 .back {
   background: purple;
 }
-[data-symbol='6'] .back {
+#card6 .back {
   background: orange;
 }
-[data-symbol='7'] .back {
+#card7 .back {
   background: gray;
 }
-[data-symbol='8'] .back {
+#card8 .back {
   background: whitesmoke;
+}
+[data-hit='hit'] .back{
+  background: transparent !important;
+  border: 1px solid #b3751e;
 }
